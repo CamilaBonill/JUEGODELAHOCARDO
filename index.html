@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Viewport" content="width=device-width">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="canvas.css">
+        <link rel="stylesheet" href="botones.css">
+        <link rel="stylesheet" href="responsive.css">
+        <title>Juego del ahorcado - Alura Challenges ONE</title>
+    </head>
+    <body>  
+         
+        <div class="logo">
+            <img id = "logoimg" src = "imagenes/Vector.png">
+        </div>
+        <div class="botones">
+            <button type="submit" class="btn" id="btn-inicio" value="Iniciar Juego" onclick="inicio()">Inicio</button>
+            <button type="submit" class="btn" value="Agregar nueva palabra" id="btn-agregarpalabra" onclick="agregarpalabra()">Agregar palabra</button>
+        </div>
+        <div id="inputwold">
+            <textarea type="submit" class = "text-input" id="inputTexto" rows='1' placeholder="Ingrese una palabra"></textarea>
+            <div class="frame1">
+                <img id="imgadvertencia" src="imagenes/advertencia.png">
+                <p id="advertencia">Máx. de 8 letras</p>
+            </div>
+            <div class="botones2">
+                <button type="button" class="btn" id="btn__guardaryempezar" onclick="guardarPalabra()">Guardar y empezar</button>
+                <button type="button" class="btn" id="btn__cancelar" onclick="upgrade()">Cancelar</button>
+            </div>
+        </div>
+        <div id="jugando">
+            <div class="jugando__botones">
+                <button type="button" class="btn" id="btn__nuevojuego" onclick="upgrade()">Nuevo juego</button>
+                <button type="button" class="btn" id="btn__desistir"onclick="upgrade()">Salir</button>
+            </div>
+        </div>
+        <canvas id="pizarra" width="1200px" height="550px"></canvas>
+        <div id="text-loser" display="none"> 
+            <h1>PERDISTE</h1>  
+        </div>
+        <div id="text">
+            <h1>GANASTE</h1>
+        </div>
+        <div id="burs">
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+            <div class="burbujas"></div>
+        </div>
+        <script type="text/javascript" src="main.js"></script>
+        
+        <script type="text/javascript" src="horca.js"></script>
+    
+    </body>
+</html>

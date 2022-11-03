@@ -2,12 +2,12 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="Viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="Viewport" content="width = device-width">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="canvas.css">
         <link rel="stylesheet" href="botones.css">
-        <link rel="stylesheet" href="responsive.css">
         <title>Juego del ahorcado - Alura Challenges ONE</title>
     </head>
     <body>  
@@ -36,13 +36,14 @@
                 <button type="button" class="btn" id="btn__desistir"onclick="upgrade()">Salir</button>
             </div>
         </div>
-        <canvas id="pizarra" width="1200px" height="550px"></canvas>
+        <canvas id="pizarra" width="1200px" height="500px"></canvas>
         <div id="text-loser" display="none"> 
             <h1>PERDISTE</h1>  
         </div>
         <div id="text">
             <h1>GANASTE</h1>
         </div>
+        
         <div id="burs">
             <div class="burbujas"></div>
             <div class="burbujas"></div>
@@ -62,9 +63,31 @@
             <div class="burbujas"></div>
             <div class="burbujas"></div>
         </div>
+        <footer class="contacto">
+            <p class="contacto__firma">
+                Hecho por JANELKA BONILLA en ONE-Chalenge 3
+            </p>
+            <p class="contacto__redes">
+                <a
+                href="https://www.linkedin.com/in/janelkabonillasosa/"
+                target="_blank"
+                ><img
+                    class="contacto__redes--linkedin"
+                    src="imagenes/linkedin_logo.png"
+                    alt="LinkedIn Logo"
+                /></a>
+            </p>
+            <p class="contacto__redes">
+                <a href="https://github.com/CamilaBonill" target="_blank"
+                ><img
+                    class="contacto__redes--github"
+                    src="imagenes/github_logo.png"
+                    alt="Github Logo"
+                /></a>
+            </p>
+        </footer>
         <script type="text/javascript" src="main.js"></script>
-        
         <script type="text/javascript" src="horca.js"></script>
-    
     </body>
+    
 </html>

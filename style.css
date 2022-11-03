@@ -2,25 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 body{
     font-family: 'Inter', sans-serif;
-    background-image: url(/retoelahorcado/imagenes/bgcull.png);
+    background: url(bgcull.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     position: relative;
-    width: auto;
-    height: auto;
+    
+    height: 840px;
     
     /*#663399*/
 }
 canvas{
     display: none;
     background-color: transparent;
-    position: fixed;
-    top: 8rem;
-    left: 18rem;
-    z-index: 0;
+    z-index: 10;
     border-radius: 25px;
+    width: 80%;
+    height: 62%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
 }
 #burs{
     height: 100vh;
@@ -38,13 +40,13 @@ canvas{
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 15rem;
+    top: 40%;
 }
 
 #btn-inicio{
     background-color: #0A3871;
-    width: 20rem;
-    height: 7rem;
+    width: 320px;
+    height: 112px;
    
     
     /* Dark blue/dark-blue-300 */
@@ -64,9 +66,9 @@ canvas{
 #btn-agregarpalabra{
     box-sizing: border-box;
 
-    margin-top: 2rem;
-    width: 17.5rem;
-    height: 4rem;
+    margin-top: 2%;
+    width: 280px;
+    height: 64px;
     background: transparent;
     /* Dark blue/dark-blue-300 */
 
@@ -82,11 +84,11 @@ canvas{
     color: #0A3871;
 }
 /*ingreso la palabra*/
-#inputwold{
-    
+#inputwold{ 
     display: none;
     flex-direction: column;
-
+    position: relative;
+    height: 90%;
 }
 .text-input{
     
@@ -94,8 +96,8 @@ canvas{
     width: 299px;
     height: 48px;
     position: relative;
-    left: 30rem;
-    top: 8rem;
+    left: 30%;
+    top: 20%;
     
 
     font-family: 'Inter';
@@ -112,9 +114,9 @@ canvas{
     gap: 8px;
     font-size: 10px;
     position: relative;
-    left: 30rem;
-    top: 25rem;
-    width: 10rem;
+    left: 30%;
+    top: 59%;
+    width: 160px;
 }
 p{
     font-family: 'Inter';
@@ -125,13 +127,13 @@ p{
 .botones2{
     
     position: relative;
-    left: 30rem;
-    top: 25rem;
-    width: 40rem;
+    left: 30%;
+    top: 60%;
+    width: 640px;
 }
 .btn{
-    width: 19rem;
-    height: 4rem;
+    width: 304px;
+    height: 64px;
     border-radius: 24px;
 }
 #btn__guardaryempezar{
@@ -149,15 +151,16 @@ p{
 /*jugando 1*/
 #jugando{
     display: none;
-    height: 5px;
+    height: 8%;
+    position: relative;
+    top: 80%;
     
 }
 .jugando__botones{
     
     position: relative;
-    left: 40rem;
-    top: 42rem;
-    width: 40rem;
+    left: Calc(50% - 304px);
+    width: 640px;
 }
 #btn__nuevojuego{
     background-color: #0A3871;
@@ -170,4 +173,32 @@ p{
 
     border: 1px solid #0A3871;
     border-radius: 24px;
+}
+/*Ajustes del Footer*/
+
+.contacto {
+    position: fixed;
+    z-index: 0;
+    top: 85%;
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
+.contacto__firma {
+    font-size: 16px;
+    margin: 0%;
+}
+
+.contacto__redes {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1em 1em 2em;
+}
+
+.contacto__redes--linkedin {
+    width: 50px;
+}
+
+.contacto__redes--github {
+    width: 55px;
 }

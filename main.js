@@ -17,6 +17,7 @@ function inicio(){
     document.getElementById("btn-agregarpalabra").style.display = "none";
     document.getElementById("jugando").style.display = "flex";
     document.getElementById("pizarra").style.display = "flex";
+    document.getElementById("contac").style.top= "78%"
     
     chooseword()
     dibujarTablero()
@@ -56,6 +57,7 @@ function agregarpalabra(){
     document.getElementById("btn-inicio").style.display = "none";
     document.getElementById("btn-agregarpalabra").style.display = "none";
     document.getElementById("inputwold").style.display = "flex";
+    document.getElementById("contac").style.top= "10%"
 }
 
 //elegir palabra secreta
@@ -123,7 +125,7 @@ function verificarLetraClicada(key) {
       letras.push(key)
       return true
     }
-  }
+}
   
   //impide que teclas como shift y otras, sean consideradas errores y sean escritas
 function verificarLetra(keyCode) {

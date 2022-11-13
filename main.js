@@ -1,6 +1,6 @@
 
 //variable
-let words = ['ALURA', 'AHORCADO', 'HTML', 'ORACLE', 'JAVASCRIPT', 'LOGICA', 'PROGRAMACION', 'DESAFIO'];
+let words = ['ALURA', 'AHORCADO', 'HTML', 'ORACLE', 'JAVASCRIPT', 'LOGICA', 'DESAFIO'];
 let tablero = document.getElementById("pizarra").getContext("2d");
 let palabraSecreta = "";
 let letras = []
@@ -9,6 +9,13 @@ var palabraCorrecta = "";
 let letrasIncorrectas = [];
 let numeroDeErrores = 9
 let letraElegida = [];
+const $finJuegoMens = document.querySelector("#finDeJuego");
+//audios
+const winnerAudio = new Audio("winnergta.mp3")
+const wastedAudio = new Audio("wasted.mp3")
+const comienzo= new Audio("sfx-magic4.mp3")
+const mala = new Audio("sfx-impact7.mp3")
+const buena = new Audio("sfx-magic14.mp3")
 
 //funciones
 
@@ -19,7 +26,7 @@ function inicio(){
     document.getElementById("pizarra").style.display = "flex";
     document.getElementById("contac").style.top= "78%"
     
-    chooseword()
+    comienzo.play()
     dibujarTablero()
     dibujarLineas()
     document.onkeydown = (e) => {
@@ -34,7 +41,7 @@ function inicio(){
                 if (palabraSecreta[i] === letra) {
                   escrribirLetraCorrecta(i)
                   verificarVencedor(letra)
-    
+                  buena.play()
                 }
               }
     
@@ -45,6 +52,7 @@ function inicio(){
               if (!verificarLetraClicada(e.key) && !verificarVencedor(letra)) return
               dibujarAhorcado(errores)
               verificarFinJuego(letra)
+              mala.play()
             }
           }
         }
@@ -63,15 +71,14 @@ function agregarpalabra(){
 //elegir palabra secreta
 
 function chooseword(){
+  
     let word = words[Math.floor(Math.random()*words.length)]
     palabraSecreta = word;
-    return word
+    inicio()
+    return word; 
 }
 
-function play(){
-    document.getElementById("jugando").style.display = "flex";
-    document.getElementById("inputwold").style.display = "none"
-}
+
 //comprobacion letra
 function comprobarletra(key){
     let estado = false
@@ -101,7 +108,7 @@ function guardarPalabra(){
   
     // incluye la palabra que el usuario digitó en el array de las palabras a seren sorteadas
     if(nuevaPalabra !== ""){
-      words.push(nuevaPalabra);
+      palabraSecreta= nuevaPalabra.toUpperCase();
     
       // haz con que los componentes de la pantalla de agregar palabra desaparezcan
       document.getElementById("inputwold").style.display = "none";
@@ -151,12 +158,16 @@ function verificarFinJuego(letra) {
    if(letraElegida.length < palabraSecreta.length) { 
       //incluye las letras ya digitadas en el arrau
       letrasIncorrectas.push(letra);
-      
-  
       //valida se el usuário cometió el numero maximo de errores
       if (letrasIncorrectas.length > numeroDeErrores) {
         //perdiste()
-        document.getElementById("text-loser").style.display = "flex";
+        document.getElementById("text").style.display = "inline-block";
+        document.getElementById("wested").style.display = "flex";
+        document.getElementById("winner").style.display = "none";
+        $finJuegoMens.innerHTML = `La palabra era ${palabraSecreta}`;
+        $finJuegoMens.style.color = "red";
+        $finJuegoMens.style.visibility = "visible";
+        wastedAudio.play()
       }
       else if(letraElegida.length < palabraSecreta.length) {
         adicionarLetraIncorrecta(letra)
@@ -168,9 +179,11 @@ function verificarFinJuego(letra) {
 function verificarVencedor(letra) {
     letraElegida.push(letra.toUpperCase());
     if (letraElegida.length == palabraSecreta.length) {
+      winnerAudio.play()
+      document.getElementById("winner").style.display = "flex";
       document.getElementById("text").style.display = "flex";
-      //ganaste()
-      
+      document.getElementById("wested").style.display = "none";
+      $finJuegoMens.style.display = "none";
     }
   
 }

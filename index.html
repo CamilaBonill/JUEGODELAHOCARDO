@@ -2,8 +2,8 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="Viewport" content="width = device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="Viewport" content="width = device-width" initial-scale = 1.0>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="canvas.css">
@@ -16,11 +16,11 @@
             <img id = "logoimg" src = "imagenes/Vector.png">
         </div>
         <div class="botones">
-            <button type="submit" class="btn" id="btn-inicio" value="Iniciar Juego" onclick="inicio()">Inicio</button>
+            <button type="submit" class="btn" id="btn-inicio" value="Iniciar Juego" onclick="chooseword()">Inicio</button>
             <button type="submit" class="btn" value="Agregar nueva palabra" id="btn-agregarpalabra" onclick="agregarpalabra()">Agregar palabra</button>
         </div>
         <div id="inputwold">
-            <textarea type="submit" class = "text-input" id="inputTexto" rows='1' placeholder="Ingrese una palabra"></textarea>
+            <textarea type="submit" class = "text-input" id="inputTexto" rows='1' maxlength="8" placeholder="Ingrese una palabra"></textarea>
             <div class="frame1">
                 <img id="imgadvertencia" src="imagenes/advertencia.png">
                 <p id="advertencia">Máx. de 8 letras</p>
@@ -38,31 +38,16 @@
         </div>
         <canvas id="pizarra" width="1200px" height="500px"></canvas>
         <div id="text-loser" display="none"> 
-            <h1>PERDISTE</h1>  
+            
         </div>
         <div id="text">
-            <h1>GANASTE</h1>
+            <img Id="wested" width="300px" height="300px"  src="imagenes/wested.png">
+            <img Id="winner" width="300px" height="300px"  src="imagenes/winner.png">
+            <p class="areaDeJuego__mensajeFin" id="finDeJuego">
+                FELICIDADES!! GANASTE
+            </p>
         </div>
         
-        <div id="burs">
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-            <div class="burbujas"></div>
-        </div>
         <footer id= "contac" class="contacto">
             <p class="contacto__firma">
                 Hecho por JANELKA BONILLA en ONE-Chalenge 3

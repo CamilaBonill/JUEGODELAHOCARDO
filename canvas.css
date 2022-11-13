@@ -23,80 +23,17 @@ h1 {
 }
 
 
-#text, #text-loser{
+#text{
     display: none;
-    position: fixed;
+    align-content: center;
     top: 20%;
     left: 50%;
-    z-index: 2;
 } 
 
 #offset {
     animation: letter-flicker 5s linear infinite;
   }
  
-@keyframes text-flicker {
-    0% {
-    
-      opacity:0.1;
-      text-shadow: 0px 0px 29px var(--bgcolor);
-    }
-    
-    2% {
-      opacity:1;
-      text-shadow: 0px 0px 29px var(--bgcolor);
-    }
-    8% {
-      opacity:0.1;
-      text-shadow: 0px 0px 29px var(--bgcolor);
-    }
-    9% {
-      opacity:1;
-      text-shadow: 0px 0px 29px var(--bgcolor);
-    }
-    12% {
-      opacity:0.1;
-      text-shadow: 0px 0px var(--bgcolor);
-    }
-    20% {
-        font-size: 90px;
-      opacity:1;
-      text-shadow: 0px 0px 29px var(--bgcolor)
-    }
-    25% {
-        transform: scale(2);
-      opacity:0.3;
-      text-shadow: 0px 0px 29px var(--bgcolor)
-    }
-    30% {
-      opacity:1;
-      text-shadow: 0px 0px 29px var(--bgcolor)
-    }
-    50% {
-        transform: scale(3);
-    }
-    70% {
-        transform: scale(3.5);
-      opacity:0.7;
-      text-shadow: 0px 0px 29px var(--bgcolor)
-    }
-    
-    72% {
-      opacity:0.2;
-      text-shadow:0px 0px 29px var(--bgcolor)
-    }
-    
-    77% {
-      opacity:.9;
-      text-shadow: 0px 0px 29px var(--bgcolor)
-    }
-    100% {
-      
-      opacity:.9;
-      text-shadow: 0px 0px 29px var(--bgcolor)
-    }
-}
-  
 @keyframes border-flicker {
     0% {
         opacity:0.1;
@@ -135,46 +72,41 @@ h1 {
         -moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
         box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
     }
-  }
-  
- /*@keyframes letter-flicker {
-    0% {
-      opacity:0.1;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-    2% {
-      opacity:0.1;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-    4% {
-      opacity:1;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-    
-    
-    19% {
-      opacity:1;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-    21% {
-      opacity:0.1;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-    23% {
-      opacity:1;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-    
-    80% {
-      opacity:1;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-    83% {
-      opacity:0.4;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-    87% {
-      opacity:1;
-      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
-    }
-  }*/
+}
+/*ganador mensaje*/
+
+
+
+.areaDeJuego__mensajeFin {
+    position:fixed;
+    top: 55%;
+    left: calc(50% - 130px);
+    display: inline-block;
+    margin-top: 0;
+    padding: 50px;
+    color: green;
+    font-size: 24px;
+    border-radius: 20px;
+    box-shadow: 10px 20px 20px -15px #0a387188;
+    backdrop-filter: blur(3px);
+    background-color: #f3f5fccc;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgb(233 202 102);
+}
+#wested{
+  position:fixed;
+  top: -70px;
+  left: calc(50% - 500px);
+  width: 1000px;
+  height: 790px;
+  color: green;
+  backdrop-filter: blur(3px); 
+}
+#winner {
+  position:fixed;
+  left: calc(50% - 500px);
+  width: 800px;
+  padding: 50px;
+  color: green;
+  backdrop-filter: blur(3px); 
+}

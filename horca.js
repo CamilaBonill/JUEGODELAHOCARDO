@@ -1,6 +1,6 @@
-var color = "#82C2E5"
+var color = "#ffffff"
 function dibujarTablero() {
-  tablero.lineWidth=6
+  tablero.lineWidth=
   tablero.lineCap="round"
   tablero.lineJoin="round"
   tablero.fillStyle= "transparent"
@@ -14,7 +14,7 @@ function dibujarTablero() {
 }
 
 function dibujarLineas() {
-  tablero.lineWidth=4
+  tablero.lineWidth=6
   tablero.lineCap="round"
   tablero.lineJoin="round"
   tablero.strokeStyle = color

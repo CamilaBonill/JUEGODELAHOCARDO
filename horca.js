@@ -1,4 +1,4 @@
-var color = "#ffffff"
+
 function dibujarTablero() {
   tablero.lineWidth=
   tablero.lineCap="round"

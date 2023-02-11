@@ -64,7 +64,7 @@ function agregarpalabra(){
     document.getElementById("btn-inicio").style.display = "none";
     document.getElementById("btn-agregarpalabra").style.display = "none";
     document.getElementById("inputwold").style.display = "flex";
-    document.getElementById("contac").style.top= "10%"
+    document.getElementById("contac").style.top= "0"
 }
 
 //elegir palabra secreta

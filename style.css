@@ -9,7 +9,7 @@ body{
     flex-direction: column;
     position: relative;
     
-    height: 840px;
+    height: 100vh;
     
     /*#663399*/
 }
@@ -177,7 +177,7 @@ p{
 
 .contacto {
     position: relative;
-    top: 60%;
+    top: 45%;
     width: 100%;
     padding-top: 50px;
     text-align: center;
@@ -194,9 +194,9 @@ p{
 }
 
 .contacto__redes--linkedin {
-    width: 50px;
+    width: 30px;
 }
 
 .contacto__redes--github {
-    width: 55px;
+    width: 35px;
 }

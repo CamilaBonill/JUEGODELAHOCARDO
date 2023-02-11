@@ -1,4 +1,9 @@
-
+var color = "#82C2E5"
+if (window.matchMedia("(max-width: 768px)").matches) {
+  // Si es menor o igual a 768px, cambiar el valor de las variables
+  color = "#FF0000";
+  
+}
 function dibujarTablero() {
   tablero.lineWidth=
   tablero.lineCap="round"

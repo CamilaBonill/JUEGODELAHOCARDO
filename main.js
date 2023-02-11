@@ -1,5 +1,4 @@
 
-//variable
 let words = ['ALURA', 'AHORCADO', 'HTML', 'ORACLE', 'JAVASCRIPT', 'LOGICA', 'DESAFIO'];
 let tablero = document.getElementById("pizarra").getContext("2d");
 let palabraSecreta = "";

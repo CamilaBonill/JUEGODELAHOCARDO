@@ -5,7 +5,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
   
 }
 function dibujarTablero() {
-  tablero.lineWidth=
+  tablero.lineWidth= 6
   tablero.lineCap="round"
   tablero.lineJoin="round"
   tablero.fillStyle= "transparent"

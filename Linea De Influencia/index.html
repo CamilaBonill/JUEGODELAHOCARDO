@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Linea de Influencia</title>
+</head>
+<body>
+ <canvas width="1200px" height="1200px" style="border: solid;"></canvas>
+ <div id="input_info">
+    <div id="Longitud_v">
+        <h1>Datos De la Viga</h1>
+        <div class="datos">
+            <p>Escala =  </p>
+            <input type="text" class="input_dato" id= "es" value="20">
+        </div>
+        <div class="datos">
+            <p>Longitud Viga =  </p>
+            <input type="text" class="input_dato" id="Longitud_Viga" value="20">
+            <button onclick="viga()" class="btn_add" id="add_1">add</button>
+        </div>
+        <div class="datos">
+            <p>Apoyo = </p>
+            <input type="text" class="input_dato" id="Apoyo" value="0"> 
+            <button onclick="AddApoyo()" class="btn_add" id="add_2">add</button>
+        </div>
+        <div class="datos">
+            <p>Nudo = </p>
+            <input type="text" class="input_dato" id="nudo" value="0"> 
+            <button onclick="Addnudo()" class="btn_add" id="add_3">add</button>
+        </div>
+    </div>
+    <div id="Longitud_v">
+        <h1>Linea de Influencia</h1>
+        <div class="datos">
+            <p>eje = </p>
+            <input type="text" class="input_dato" id="lineinfluencia" value="0"> 
+            <button onclick="ejes()" class="btn_add" id="add_2">add</button>
+        </div>
+        <div class="datos">
+            <p>inicio LF x =  </p>
+            <input type="text" class="input_dato" id="inicox" value="0">
+        </div>
+        <div class="datos">
+            <p>inicio LF y=  </p>
+            <input type="text" class="input_dato" id="inicoy" value="50">
+        </div>
+        <div class="datos">
+            <p>Longitud LF = </p>
+            <input type="text" class="input_dato" id="distanciax" value="6"> 
+        </div>
+        <div class="datos">
+            <p>Longitud LF2 = </p>
+            <input type="text" class="input_dato" id="distanciax2" value="8"> 
+        </div>
+        <div class="datos">
+            <p>Longitud LF3 = </p>
+            <input type="text" class="input_dato" id="distanciax3" value="8"> 
+        </div>
+        <div class="datos">
+            <p>altura = </p>
+            <input type="text" class="input_dato" id="distanciay" value="0"> 
+            <button onclick="LineaInfluencia()" class="btn_add" id="add_2">add</button>
+        </div>
+
+        <div class="datos">
+            <p>borrar = </p>
+            <button onclick="undo()" class="btn_add" id="undoButton">borrar</button>
+        </div>
+
+    </div>
+    
+    
+
+ </div> 
+
+ <script src="./cuadricula.js"></script>
+ <script src="./canvas.js"></script>
+ <script src="./main.js"></script>
+ <script src="./drawbeam.js"></script>
+
+</body>
+
+</html>
